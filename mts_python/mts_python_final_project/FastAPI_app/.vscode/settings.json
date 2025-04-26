@@ -1,0 +1,6 @@
+{
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/src"
+  ],
+  "python.defaultInterpreterPath": "C:\\Users\\smirn\\OneDrive\\Рабочий стол\\fastapi_shad_2025-lesson_3\\venv\\Scripts\\python.exe"  // Путь к интерпретатору Python в виртуальной среде для Windows
+}

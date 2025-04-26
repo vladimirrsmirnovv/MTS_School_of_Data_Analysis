@@ -1,0 +1,47 @@
+# Набор тестов для эндпоинтов которые можно запустить
+# в VSCode с помощью плагина  REST Client
+# Найти можно по идентификатору: humao.rest-client
+# Tunder Client не позволяет свободно импортировать-экспортировать записи,
+# поэтому перешел на этот плагин. Он тоже хорош :-)
+
+# Создаем книгу
+POST http://localhost:8000/api/v1/books/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Clean Architecture",
+    "author": " Robert Martin",
+    "count_pages": 300,
+    "year": 2025
+}
+
+###
+
+# Получаем список книг
+GET http://localhost:8000/api/v1/books/ HTTP/1.1
+
+###
+
+# Получаем одну книгу по ее ИД
+GET http://localhost:8000/api/v1/books/1 HTTP/1.1
+
+###
+
+# Удаляем книгу
+DELETE http://localhost:8000/api/v1/books/1 HTTP/1.1
+
+###
+
+# Обновляем поля в данных о книге
+PUT http://localhost:8000/api/v1/books/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 5,
+    "title": "Clean Code",
+    "author": "Robert Martin",
+    "year": 2022,
+    "pages": 310
+}
+
+###
